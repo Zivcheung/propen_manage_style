@@ -1,0 +1,65 @@
+@import "common/var";
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900|Roboto');
+@import "mixins/bem.scss";
+@import "common/fonts.scss";
+
+
+
+// full window adoption
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    height:100%;
+}
+
+// global style initialization 
+#app {
+    height:100%;
+    font-family: Helvetica, Roboto, Arial, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size:$--font-size-base;
+    color:$--grey-10;
+    h1{
+        font-size:$--font-size-super-large;
+        font-weight:bold;    
+    }
+    h2{
+        font-size:$--font-size-extra-large;
+        font-weight:bold;    
+    }
+    h3{
+        font-size:$--font-size-large; 
+        font-weight:bold;    
+    }
+    h4{
+        font-size:$--font-size-medium;  
+        font-weight:bold;    
+    }
+}
+@include b(window-page-wp){
+    height:100%;
+    background-color:$--grey-1;
+}
+@include b(fit-parent-wp){
+    position:relative;
+    height:100%;
+    width:100%;
+}
+
+@include b(paragraph){
+    margin:20px;
+    line-height: 1.2em;
+    font-size: $--font-size-medium-large;
+    font-family: PingFang,"Times New Roman",Times,serif;
+    color:rgba($--grey-10,0.84);
+}
+
+.el-form-item--small .el-form-item__label{
+    color: $--grey-9;
+    font-size: $--font-size-small;
+    line-height: 18px;
+}

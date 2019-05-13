@@ -1,0 +1,13 @@
+$localColor:null;
+@mixin setColor($c){
+    $localColor:$c !global;
+}
+@mixin name{
+    color:$localColor;
+}
+
+.color-box{
+    @include setColor(green);
+    $localColor:red;
+    @include name;
+}

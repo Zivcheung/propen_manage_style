@@ -1,0 +1,34 @@
+@import "common/var";
+@import "mixins/bem.scss";
+
+@include b(constructing-page){
+
+  @include e(intro-upload){
+    display: block;
+    .el-upload{
+      display: block;
+      .el-upload-dragger{
+        display: block;
+        width: 100%;
+        padding-top:50px;
+        border: 2px dashed $--blue-prim;
+        i{
+          font-size:60px;
+        }
+      }
+    }
+    @include m(flat){
+      .el-upload-dragger{
+        padding-top:0 !important;
+        line-height: 40px;
+        height:40px;
+        border: 2px dashed $--blue-prim;
+        i{
+          font-size:20px !important;
+          margin-right:20px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

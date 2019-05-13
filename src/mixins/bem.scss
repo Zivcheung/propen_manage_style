@@ -1,0 +1,59 @@
+/* global */
+$element-separator:"__";
+$modifier-separator:"--";
+$state-prefix:"is-";
+$B:null;
+$E:null;
+
+
+/* ßem function wrapper */
+@mixin b($block){
+    $B:$block !global;
+    .#{$B}{
+        @content;
+    }
+}
+
+@mixin e($element,$rootFlag:false){
+    $E:$element !global;
+    $parent-block:&;
+    $currentSelector:"";
+
+    @each $e in $E{
+        $currentSelector:#{$currentSelector+'.'+$B+$element-separator+$e+','};
+    }
+    @if $rootFlag == true {
+        @at-root {
+            #{$currentSelector}{
+                @content;
+            }
+        }
+    } @else{
+        @at-root {
+            #{$parent-block}{
+                #{$currentSelector}{
+                    @content;
+                }
+            } 
+        }
+    }
+    
+}
+
+@mixin m($modifier){
+    $currentSelector:#{&+$modifier-separator+$modifier};
+
+    @at-root {
+        #{$currentSelector}{
+            @content;
+        }
+    }
+}
+
+@mixin when($state){
+    @at-root {
+        &.#{$state-prefix+$state}{
+            @content;
+        }
+    }
+}

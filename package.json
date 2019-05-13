@@ -1,0 +1,26 @@
+{
+  "name": "style",
+  "version": "0.1.0",
+  "description": "This project orgnize Sass and generated css styles with its gulp automation tool.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production gulp style ",
+    "start": "NODE_ENV=development gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tianzhu",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-style-aliases": "^1.1.11",
+    "postcss-discard-comments": "^4.0.2"
+  }
+}

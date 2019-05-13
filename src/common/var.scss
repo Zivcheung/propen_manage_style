@@ -1,0 +1,54 @@
+
+
+//grey pallets
+$--grey-1:#ffffff !default;
+$--grey-2:#fafafa !default;
+$--grey-3:#f5f5f5 !default;
+$--grey-4:#e8e8e8 !default;
+$--grey-5:#d9d9d9 !default;
+$--grey-6:#b2b2b2 !default;
+$--grey-7:#828282 !default;
+$--grey-8:#535353 !default;
+$--grey-9:#262626 !default;
+$--grey-10:#000000 !default;
+
+// color pallets
+    ///signature
+$--cyan-signature:#31e6c2;
+    ///primary
+$--blue-prim:#0075ff !default;
+$--yellow-prim:#ffbe00 !default;
+$--orange-prim:#ff4f00 !default;
+$--magenta-prim:#ea0a8a !default;
+$--red-prim:#da0000 !default;
+
+//font size
+$--font-path: 'fonts' !default;
+$--font-size-super-large: 72px !default;
+    /// fontSize|[主标题文字大小,Extra large font size,Extra large font size]|FontSize|0
+$--font-size-extra-large: 30px !default;
+    /// fontSize|[标题文字大小,large font size,large font size]|FontSize|0
+$--font-size-large: 24px !default;
+    /// fontSize|[小标题文字大小,Medium font size,Medium font size]|FontSize|0
+$--font-size-medium-large: 20px !default;
+    /// fontSize|[正文文字大小,base font size,base font size]|FontSize|0
+$--font-size-medium: 16px !default;
+$--font-size-base: 14px !default;
+    /// fontSize|[正文（小）文字大小,small font size,small font size]|FontSize|0
+$--font-size-small: 13px !default;
+    /// fontSize|[辅助文字大小,Extra small font size,Extra small font size]|FontSize|0
+$--font-size-extra-small: 12px !default;
+
+// responsive screen size
+$--screen-xl:1920px;
+$--screen-lg:1200px;
+$--screen-md:992px;
+$--screen-sm:768px;
+// $--screen-xs:768px;
+
+
+// transition
+$--transition-normal: ease-in-out;
+$--transition-ease-in: cubic-bezier(.43,.01,.91,.58);
+$--transition-ease-out: cubic-bezier(0,.53,.68,.99);
+

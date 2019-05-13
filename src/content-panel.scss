@@ -1,0 +1,78 @@
+@import "common/var";
+@import "mixins/bem.scss";
+
+@include b(content-panel){
+  position:relative;
+
+  @include e(form){
+    padding-top:100px;
+    width:100%;
+  }
+
+
+  @include e(toc-wp){
+    position: absolute;
+    top:0;
+    height:100%;
+  }
+  @include e(tableofcontent){
+    box-sizing:border-box;
+    height:100%;
+    padding-top:40px;
+    overflow-y:auto;
+    // overflow-x:hidden;
+    border-right: 2px solid $--grey-1;
+    &:not(.el-menu--collapse){
+      width:100%;
+      color:$--grey-1;
+    }
+    &.el-menu--collapse{
+      width:54px;
+      color:$--grey-1;
+    }
+    
+    .el-menu-item:hover, .el-menu-item.is-active{
+      @include e(page-delete){
+        visibility: visible;
+      }
+    }
+    
+    
+  }
+  @include e(toc-toggle){
+    position:absolute;
+    top:10px;
+    left:15px;
+    transition:.3s;
+    transform:rotate(45deg);
+    cursor: pointer;
+    i{
+      font-size:20px;
+      color:$--grey-1;
+    }
+    @include when(collapsed){
+      transform:rotate(0deg);
+    }
+  }
+  @include e(add-section){
+    cursor: pointer;
+    padding: 10px 20px;
+    color:$--yellow-prim;
+  }
+  @include e(add-page){
+    cursor: pointer;
+    padding: 10px 40px;
+    color:$--grey-2;
+    font-size:12px;
+  }
+  @include e(page-delete){
+    position: absolute;
+    right: 20px;
+    top:50%;
+    visibility: hidden;
+    margin-top: -6px;
+    font-size:12px;
+    transform:rotate(45deg);
+    cursor: pointer;
+  }
+}
