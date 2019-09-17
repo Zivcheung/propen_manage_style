@@ -1,0 +1,11 @@
+@import "common/var";
+@import "mixins/bem.scss";
+
+@include b(dashboard){
+
+  @include e(width-wp){
+    max-width: 1440px;
+    margin:20px auto;
+    padding: 0 40px;
+  }
+}

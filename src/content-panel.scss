@@ -20,7 +20,7 @@
     height:100%;
     padding-top:40px;
     overflow-y:auto;
-    // overflow-x:hidden;
+    overflow-x:hidden;
     border-right: 2px solid $--grey-1;
     &:not(.el-menu--collapse){
       width:100%;
@@ -29,6 +29,9 @@
     &.el-menu--collapse{
       width:54px;
       color:$--grey-1;
+      span {
+        visibility:hidden;
+      }
     }
     
     .el-menu-item:hover, .el-menu-item.is-active{
@@ -58,12 +61,14 @@
     cursor: pointer;
     padding: 10px 20px;
     color:$--yellow-prim;
+    white-space: nowrap;
   }
   @include e(add-page){
     cursor: pointer;
     padding: 10px 40px;
     color:$--grey-2;
     font-size:12px;
+    white-space: nowrap;
   }
   @include e(page-delete){
     position: absolute;

@@ -1,0 +1,27 @@
+@import "common/var";
+@import "mixins/bem.scss";
+
+@include b(project-card){
+  margin:20px 5px;
+  @include e(img-ratio-wp){
+    position:relative;
+    width:100%;
+    padding-top:56.25%;
+  }
+  @include e(img){
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
+  @include e(title){
+    padding:10px 0;
+    font-size:$--font-size-medium;
+    font-weight: bold;
+  }
+  @include e(authors){
+    padding:5px 0;
+  }
+}

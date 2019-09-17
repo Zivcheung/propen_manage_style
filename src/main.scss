@@ -41,6 +41,7 @@ body {
     }
 }
 @include b(window-page-wp){
+    position: relative;
     height:100%;
     background-color:$--grey-1;
 }
@@ -62,4 +63,19 @@ body {
     color: $--grey-9;
     font-size: $--font-size-small;
     line-height: 18px;
+}
+
+@include b(breadscrab) {
+    padding:10px 0;
+    font-size:$--font-size-medium;
+}
+
+@include b(title) {
+    padding: 10px 0;
+}
+
+@include b(footer-text) {
+    padding: 5px 0;
+    font-size: $--font-size-small;
+    color: $--grey-8;
 }

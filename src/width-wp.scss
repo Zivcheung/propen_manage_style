@@ -1,0 +1,26 @@
+@import "common/var";
+@import "mixins/bem.scss";
+
+@include b('width-wp') {
+  margin:auto;
+  max-width: 1440px;
+}
+
+@include b('breadcrumb') {
+  padding: 25px 0;
+}
+@include b('curation-step') {
+  padding-bottom: 25px;
+}
+
+@include b('curation-section') {
+  padding-bottom: 50px;
+}
+@include b('curation-construction') {
+  // padding-bottom: 50px;
+  max-height: 580px;
+}
+@include b('curation-submitbtns'){
+  padding: 10px  0 0 0;
+  width: 100%;
+} 

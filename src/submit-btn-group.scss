@@ -1,0 +1,6 @@
+@import "common/var";
+@import "mixins/bem.scss";
+
+@include b(submit-btn-group){
+  float:right;
+}

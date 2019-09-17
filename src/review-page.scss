@@ -1,0 +1,13 @@
+@import "common/var";
+@import "mixins/bem.scss";
+
+@include b(review-placeholder) {
+  // height: 700px;
+  // padding-: 20px 0;
+
+  @include e(image){
+    height: 600px;
+    margin: auto;
+    background: url("~src/assets/reviewPlaceholder.png") no-repeat center/contain;
+  }
+}

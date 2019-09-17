@@ -4,10 +4,9 @@
 $tab-height:30px;
 @include b(construct-area){
   position: relative;
-  width:90%;
-  height:600px;
+  height:500px;
   margin:$tab-height auto 0;
-  background-color: $--grey-5;
+  background-color: $--grey-3;
 
   @include e(tab-group){
     position: absolute;
@@ -45,7 +44,7 @@ $tab-height:30px;
     height:100%;
   }
 
-
+  // @include e
   //custom
   // @include e(intro){
   //   height:100%;
